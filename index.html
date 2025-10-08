@@ -58,7 +58,11 @@
       background: #1abc9c;
       color: white;
       text-align: center;
-      padding: 5rem 2rem;
+      padding: 4rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     .hero h1 {
@@ -70,9 +74,24 @@
       margin-top: 1rem;
     }
 
+    /* Headshot */
+    .headshot {
+      margin-top: 2rem;
+    }
+
+    .headshot img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
     /* About Section */
     .about {
       margin-top: 3rem;
+      text-align: center;
     }
 
     .about h2 {
@@ -82,48 +101,61 @@
 
     .about p {
       max-width: 700px;
+      margin: 0 auto;
     }
 
-    /* Projects Section */
-    .projects {
+    /* Resume Section */
+    .resume {
       margin-top: 4rem;
+      text-align: center;
     }
 
-    .projects h2 {
-      margin-bottom: 1.5rem;
+    .resume h2 {
+      margin-bottom: 1rem;
       color: #1abc9c;
     }
 
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
+    .resume a {
+      color: #1abc9c;
+      font-weight: bold;
     }
 
-    .project {
-      background: #fff;
-      padding: 1rem;
+    /* Hobbies Section */
+    .hobbies {
+      margin-top: 4rem;
+      text-align: center;
+    }
+
+    .hobbies h2 {
+      color: #1abc9c;
+      margin-bottom: 1rem;
+    }
+
+    .hobbies p {
+      max-width: 700px;
+      margin: 0 auto 1rem auto;
+    }
+
+    .hobby-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .hobby-item {
+      background: white;
+      padding: 1rem 1.5rem;
       border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      transition: transform 0.3s;
-    }
-
-    .project:hover {
-      transform: translateY(-5px);
-    }
-
-    .project h3 {
-      margin-bottom: 0.5rem;
-    }
-
-    .project p {
-      font-size: 0.9rem;
-      color: #555;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      font-weight: 500;
     }
 
     /* Contact Section */
     .contact {
       margin-top: 4rem;
+      text-align: center;
     }
 
     .contact h2 {
@@ -131,8 +163,9 @@
       color: #1abc9c;
     }
 
-    .contact p {
-      margin-bottom: 0.5rem;
+    .contact a {
+      color: #1abc9c;
+      font-weight: bold;
     }
 
     footer {
@@ -155,42 +188,65 @@
     <nav>
       <a href="#about">About</a>
       <a href="#resume">Resume</a>
+      <a href="#hobbies">Hobbies</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <section class="hero">
+    <div class="headshot">
+      <img src="assets/headshot.jpg" alt="Professional headshot of Aubrianna Cecil">
+    </div>
     <h1>Hello, I'm Aubrianna</h1>
-    <p>Web Developer | Designer | Student</p>
+    <p>Management Information Systems Student | Web Developer | Innovator</p>
   </section>
 
   <div class="container">
+
     <!-- About Section -->
     <section class="about" id="about">
       <h2>About Me</h2>
       <p>
-        I'm a passionate MIS student with experience in building website with Generative AI. I leverage my knowledge of HTML and C# to creat diverse projects and applications. My goal is to create clean and user-friendly digital experiences.
+        I’m a Management Information Systems (MIS) student passionate about technology, problem-solving, and business innovation. 
+        I enjoy exploring how systems can be optimized to create efficient, user-centered solutions. 
+        My experience includes building websites with Generative AI and applying my knowledge of HTML and C# to develop creative projects. 
+        My goal is to merge technology and strategy to help organizations grow and innovate.
       </p>
     </section>
-<br>
-<!-- Resume Section -->
-<section class="resume" id="resume">
-  <h2>Resume</h2>
-  <p>You can view or download my resume using the link below:</p>
-  <p>
-    <a href="assets/Revised Resume.docx.pdf" target="_blank" style="color: #1abc9c; font-weight: bold;">
-      📄 View My Resume
-    </a>
-  </p>
-</section>
+
+    <!-- Resume Section -->
+    <section class="resume" id="resume">
+      <h2>Resume</h2>
+      <p>You can view or download my resume below:</p>
+      <p>
+        <a href="assets/Revised Resume.docx.pdf" target="_blank">📄 View My Resume</a>
+      </p>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section class="hobbies" id="hobbies">
+      <h2>Hobbies & Interests</h2>
+      <p>
+        Outside of my academic and professional interests, I love exploring creative outlets and activities that inspire me both personally and professionally. 
+        These hobbies allow me to stay curious, develop teamwork skills, and maintain balance in my life.
+      </p>
+
+      <div class="hobby-list">
+        <div class="hobby-item">🎨 Graphic Design & Digital Art</div>
+        <div class="hobby-item">💻 Exploring AI Tools & Technology Trends</div>
+        <div class="hobby-item">📚 Reading Personal Development Books</div>
+        <div class="hobby-item">🌍 Traveling & Learning About New Cultures</div>
+        <div class="hobby-item">🏃‍♀️ Staying Active & Enjoying the Outdoors</div>
+      </div>
+    </section>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:you@example.com">cecila@tamu.edu</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">https://www.linkedin.com/in/aubrianna-cecil-61196728a</a></p>
-      <p>GitHub: <a href="https://github.com/yourusername" target="_blank">elufi.github.io</a></p>
+      <p>Email: <a href="mailto:cecila@tamu.edu">cecila@tamu.edu</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/aubrianna-cecil-61196728a" target="_blank">linkedin.com/in/aubrianna-cecil-61196728a</a></p>
+      <p>GitHub: <a href="https://elufi.github.io" target="_blank">elufi.github.io</a></p>
     </section>
   </div>
 
